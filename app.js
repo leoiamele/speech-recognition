@@ -1,7 +1,3 @@
-// const btn = document.getElementById('my-btn');
-// const test = 'Hello'
-console.log(document.getElementById('my-input'));
-
 var btn = document.getElementById("my-btn");
 btn.addEventListener('click', runSpeech);
 
@@ -19,8 +15,6 @@ function runSpeech(){
   console.log(recognition)
   recognition.start();
   
-
-
   recognition.onresult = function(event) {
     var last = event.results.length - 1;
     var command = event.results[last][0].transcript;
@@ -30,7 +24,4 @@ function runSpeech(){
   recognition.onspeechend = function() {
     recognition.stop();
 };
-
-
-  
 }
